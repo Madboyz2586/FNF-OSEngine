@@ -2467,13 +2467,13 @@ class PlayState extends MusicBeatState
 	public function updateScore(miss:Bool = false)
 	{
 		if(ratingName == '?') {
-			scoreTxt.text = 'Score: ' + songScore 
-			+ ' | Misses: ' + songMisses 
+			scoreTxt.text = 'Score: ' + songScore
+			+ ' | Misses: ' + songMisses
 			+ ' | Accuracy: ' + ratingName;
 		} else {
-			scoreTxt.text = 'Score: ' + songScore 
-			+ ' | Misses: ' + songMisses 
-			+ ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' 
+			scoreTxt.text = 'Score: ' + songScore
+			+ ' | Misses: ' + songMisses
+			+ ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%';
 		}
 
 		if(ClientPrefs.scoreZoom && !miss && !cpuControlled)
