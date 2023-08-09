@@ -2468,15 +2468,12 @@ class PlayState extends MusicBeatState
 	{
 		if(ratingName == '?') {
 			scoreTxt.text = 'Score: ' + songScore 
-			+ ' | Combo Breaks: ' + songMisses 
-			+ ' | Average: ?'
+			+ ' | Misses: ' + songMisses 
 			+ ' | Accuracy: ' + ratingName;
 		} else {
 			scoreTxt.text = 'Score: ' + songScore 
-			+ ' | Combo Breaks: ' + songMisses 
-			+ ' | Average: ' + Math.round(averageMs) + 'ms'
+			+ ' | Misses: ' + songMisses 
 			+ ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' 
-			+ ' | ' + ratingName + ' [' + ratingFC + ']';
 		}
 
 		if(ClientPrefs.scoreZoom && !miss && !cpuControlled)
